@@ -13,7 +13,7 @@ public class FlightFilterTest {
     public void filterNone() {
         LocalDateTime now = LocalDateTime.now();
         List<Flight> flightsExpected = FlightBuilderTesting.createFlights(now);
-        List<Flight> flightsActual =  new FlightFilter(FlightBuilderTesting.createFlights(now))
+        List<Flight> flightsActual = new FlightFilter(FlightBuilderTesting.createFlights(now))
                 .filter();
         assertEquals(flightsExpected.toString(), flightsActual.toString());
     }
@@ -52,6 +52,7 @@ public class FlightFilterTest {
 
         assertEquals(flightsExpected.toString(), flightsActual.toString());
     }
+
     @Test
     public void filterByMultipleFilters() {
         LocalDateTime now = LocalDateTime.now();
